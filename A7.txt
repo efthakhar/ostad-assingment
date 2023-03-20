@@ -1,0 +1,145 @@
+
+
+
+==============================================
+===== employees table ========================
+==============================================
+structure:id, name, age, salary, department_id
+==============================================
+
+
+_________________________________________________________________________
+a. Write a query to select all columns and rows from the employees table.
+_________________________________________________________________________
+sql: select * from employees
+_________________________________________________________________________
+explanation: the above query select all columns and rows from 
+             the employees table
+_________________________________________________________________________          
+
+
+
+_________________________________________________________________________
+b. Write a query to select only the name and salary columns 
+   of all employees with a salary greater than 50000.
+_________________________________________________________________________ 
+sql: select name,salary from employees where salary>50000
+_________________________________________________________________________ 
+explanation: the above query select  employees with name and salary 
+            columns where salary of each employee is greater than 50000            
+_________________________________________________________________________ 
+
+
+
+_________________________________________________________________________  
+c. Write a query to calculate the average salary of all employees.
+_________________________________________________________________________
+sql: select avg(salary) as avg_salary from employees
+_________________________________________________________________________
+explanation: the above query provide the average salary of total_employees
+_________________________________________________________________________  
+
+
+
+
+_________________________________________________________________________  
+d. Write a query to count the number of employees who work in the
+  "Marketing" department.
+_________________________________________________________________________  
+sql: select count(*) as total_employees_in_marketing
+    from employees join departments 
+    on departments.id = employees.department_id
+    where departments.name = 'Marketing'
+_________________________________________________________________________   
+explanation: the above query calculate total employees of 
+             Marketing department  
+_________________________________________________________________________      
+
+
+
+
+_________________________________________________________________________  
+e. Write a query to update the salary column of the
+   employee with an id of 1001 to 60000.
+_________________________________________________________________________      
+sql:  update employees
+      set salary = 60000
+      where id = 1001 
+_________________________________________________________________________   
+explanation: the above query updates the salary to 60000 
+             with employee id = 1001
+_________________________________________________________________________       
+
+
+
+
+_________________________________________________________________________
+f. Write a query to delete all employees whose salary is less than 30000.
+_________________________________________________________________________
+sql: delete from employees
+     where salary<30000
+_________________________________________________________________________
+explanation: the above query delete all employees whose salary is less 
+            than 30000
+_________________________________________________________________________     
+
+
+
+
+==========================================
+===== departments table ==================
+==========================================
+structure: id, name, manager
+==========================================
+
+_________________________________________________________________________
+a. Write a query to select all columns and rows from the departments table.
+_________________________________________________________________________
+sql: select * from departments
+_________________________________________________________________________
+explanation: the above query select all rows and columns from 
+             departments table
+_________________________________________________________________________  
+
+
+
+
+_________________________________________________________________________
+b. Write a query to select only the name and manager columns of the 
+   "Finance" department.
+_________________________________________________________________________    
+sql: select name,manager from departments where  name='Finance'
+_________________________________________________________________________ 
+explanation: the above query select name and manager column 
+             of Finance department from departments table 
+_________________________________________________________________________
+
+
+
+
+_________________________________________________________________________
+c. Write a query to calculate the total number of employees in 
+   each department.
+_________________________________________________________________________ 
+sql: select count(*) as total_employees, departments.name
+     from employees join departments
+     on employees.department_id = departments.id
+     group by department.name
+_________________________________________________________________________ 
+explanation: the above query calculate the total number of employees in 
+             each department.  
+_________________________________________________________________________               
+
+
+
+
+_________________________________________________________________________ 
+d. Write a query to insert a new department called "Research" with 
+   a manager named "John Doe".
+_________________________________________________________________________
+sql: insert into departments(id,name,manager)
+     values (3,'Research','John Doe');
+_________________________________________________________________________
+explanation: the above query insert a department called "Research" which 
+             manager is "John Doe"  
+_________________________________________________________________________             
