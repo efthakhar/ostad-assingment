@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -38,16 +42,30 @@
           background-color: #f2f2f2;
           padding: 20px;
         }
+        .error {      
+            color: red;
+            margin:5px;
+        }
         </style>
   </head>
   <body>
+
+  
 
     <div class="content">
 
         <h1>Login Form</h1>
         <form action="handle-login.php" method="post" enctype="multipart/form-data">
 
-        
+        <?php
+
+        if(!empty($_SESSION["login_required_error"] ) && $_SESSION["login_required_error"]==true)
+        {
+          echo  "<p class='error'>Please Fill all Fileds</p>";
+        }
+
+        ?>
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" ><br>
 
@@ -63,3 +81,7 @@
 
   </body>
 </html>
+
+<?php
+session_destroy();
+?>
