@@ -1,0 +1,55 @@
+The full description of the design and implementation of BLOG is given bellow:
+=============================================================================
+
+
+HOME PAGE:
+=========
+THis page is the main page of blog. Here We have a nav bar at top and a featured post section where
+all featured posts are shown.
+
+In order to make responsive on all deviced I use Bootstrap.
+
+
+
+Blog PAGE:
+==========
+This page holds the recent blogs and a sidebar.
+The sidebar has a search bar where user can search post by typing keyword 
+and bellow search bar there is a block containing all categories of the blog site.
+
+
+
+Single Blog Page:
+================
+This Page works as a template for all Blog. If anyone click on any blog read more button,
+he will be redirected to this page.
+
+Single blog template page has necessary elements to show the blog contents.
+These are:
+        1)) Image Tag
+        2)) Title 
+        3)) Author name 
+        4)) Blog Content
+        5)) Social share icons
+
+
+Contact Page:
+==============
+Contact page contains a form where user can given
+   1)) name
+   2)) email
+   3)) subject of message
+   4)) details message
+After Successful submission, This page refreshed and show a success message.
+If any error occured, an error message also displayed on top of the form.   
+
+
+
+
+Process Contact script:
+=======================
+To process the user form data I use a php script "process_contact.php" .
+Here at the begining, a session starts. 
+This script grab the form data and save them in a csv file. 
+If it able to save the form data successfully, it set the value of the session variable 'success' to 'true' and otherwise 
+'false'. And finally redirects to contact.php page.
