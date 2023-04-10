@@ -1,0 +1,96 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* width: 100vw; */
+    /* overflow: hidden; */
+}
+
+
+/* HEADER */
+.navbar-brand{
+   font-size: 2.5rem;
+   line-height: 1;
+   font-weight: 900;
+}
+
+.navbar-nav a:hover,.navbar-nav a.active{
+    color:#2354cd !important;
+}
+
+
+/* HOME HERO SLIDER */
+
+/* .carousel-control-prev-icon,.carousel-control-next-icon{
+    background-color: blue;
+} */
+
+.hero-slide{
+    height: 100vh;
+}
+
+.hero-slide .carousel-item{
+    width: 100vw;
+    height: 100vh;
+}
+.hero-slide .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    text-align: start;
+    top: 40%;
+}
+.carousel-caption p{
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+/* ABOUT SECTION */
+.service-section{
+    background-color: #fafbff;
+}
+
+
+/* Portfolio Section */
+
+
+
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #2354cd;
+    border-radius: 5px;
+    text-align: center;
+    color: #2354cd;
+    margin-bottom: 30px;
+
+}
+
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #2354cd;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2354cd;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #2354cd;
+    color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
