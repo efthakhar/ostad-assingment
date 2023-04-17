@@ -6,18 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        
+    </style>
 </head>
 <body>
 
+    <div>
+
+        <input type="number" id="number">
+        <button>Generate Table</button>
+
+        <br>
+        <br>
+        <br>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Iteration</th>
+                    <th>Product</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody">
+                
+            </tbody>
+
+        </table>
+
+    </div>
+
     <script>
+
+        let table = document.querySelector('.tbody')
+
+        let btn = document.querySelector('button')
+
+        btn.addEventListener('click',()=>{
+            table.innerHTML = ' '
+            let givenNumber = document.querySelector('#number').value
+            multiplicationTable(givenNumber)
+        })
+
+
+
+
         function multiplicationTable(num){
+
             for(let i = 1;i<=10;i++){
+               
+                table.insertAdjacentHTML('beforeend',
+                `<tr>
+                <td>${num}</td>
+                <td>${i}</td>
+                <td>${num*i}</td>
+                </tr>`)
+
                 console.log(`${num} x ${i} = ${num*i}`)
+
             }
+
         }
+        
         multiplicationTable(3);
-        multiplicationTable(4);
-        multiplicationTable(5);
+
     </script>
     
 </body>
