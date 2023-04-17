@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-
-.divelement{
-    width: 100px;
-    height: 100px;
-    background-color: black;
-
-    animation-name: divanimation;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes divanimation
-{
-    0% {
-        transform: scale(0) rotate(0deg);
+  <meta charset="UTF-8">
+  <title>Bootstrap Navigation Bar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* style for active menu item */
+    .navbar-default .navbar-nav > .active > a, 
+    .navbar-default .navbar-nav > .active > a:hover, 
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #fff;
+        background-color: #337ab7;
     }
-    100% {
-        transform: scale(1) rotate(360deg);
-    }
-}
-
-
-</style>
+  </style>
 </head>
 <body>
-    <div class="divelement">
-
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- logo -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+      </div>
+      <!-- menu items -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 </body>
 </html>
