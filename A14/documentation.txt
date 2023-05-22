@@ -1,0 +1,4 @@
+
+All routes of this assignment
+are placed in web.php file 
+and related controller methods are placed in TaskController
