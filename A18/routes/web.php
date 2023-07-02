@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/posts', [PostController::class, 'postsPage'])->name('posts.post');
+Route::delete('/posts/{id}/delete', [PostController::class, 'destroy'])->name('posts.delete');
+
+Route::get('/categories/{id}/posts', [CategoryController::class, 'showPosts'])->name('categories.posts');
